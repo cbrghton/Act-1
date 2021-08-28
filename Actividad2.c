@@ -12,8 +12,10 @@
 //╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝
 
 #include <stdio.h>
+#include "colors.h"
 
 char *resultado(int flag) {
+    green();
     if (flag) {
         return "1-Verdadero";
     } else {
@@ -22,6 +24,7 @@ char *resultado(int flag) {
 }
 
 int ejercicio1() {
+    reset();
     int x;
     printf("Ingrese el valor de x:\n");
     scanf("%d", &x);
@@ -38,6 +41,7 @@ int ejercicio1() {
     printf("Ingrese el valor de b:\n");
     scanf("%f", &b);
 
+    green();
     printf("La suma de %d + %d es igual a %d\n", x, y, x+y);
 
     printf("La resta de %d - %d es igual a %d\n", x, y, x-y);
@@ -56,6 +60,7 @@ int ejercicio1() {
 }
 
 int ejercicio2() {
+    reset();
     int x;
     printf("Ingrese el primer número:\n");
     scanf("%d", &x);
@@ -64,6 +69,7 @@ int ejercicio2() {
     printf("Ingrese el segundo número:\n");
     scanf("%d", &y);
 
+    green();
     printf("Igualdad: %d\n", x == y);
     printf("Desigualdad: %d\n", x != y);
     printf("El primero es mayor: %d\n", x > y);
@@ -85,6 +91,7 @@ int ejercicio3() {
     int a = 15;
     int b = 3;
 
+    green();
     printf("a) x += 10 => %d\n", x += 10);
 
     printf("b) s *= b => %d\n", s *= b);
@@ -107,33 +114,43 @@ int ejercicio4() {
     int z = 9;
 
     int first = 10 + x - y;
+    reset();
     printf("a) x = 10 + x - y equivale a: \n");
 
+    yellow();
     printf("1) x += 10 - y");
     int option = x += 10 - y;
     if (first == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n");
 
     x = 2;
 
+    yellow();
     option = x -= y + 10;
     printf("2) x -= y + 10");
     if (first == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n");
 
     x = 2;
 
+    yellow();
     option = x += 10 + y;
     printf("3) x += 10 + y");
 
     if (first == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n\n");
@@ -143,14 +160,18 @@ int ejercicio4() {
 
     //////////////////////////////////////////////////////////
 
+    reset();
     printf("b) r = 100 * r es equivalente a:\n");
 
     int second = 100*r;
 
+    yellow();
     option = r *= 100*r;
     printf("1) r *= 100 * r");
     if (second == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n");
@@ -311,6 +332,7 @@ int main() {
     int option;
 
     while (flag == 1) {
+        red();
         printf("Seleccione el ejercicio\n1) Ejercicio 1\n2) Ejercicio 2\n3) Ejercicio 3\n4) Ejercicio 4\n5) Ejercicio 5\n6) Ejercicio 6\nCualquier otra opción termina el programa\n");
 
         scanf("%d", &option);
