@@ -9,4 +9,7 @@ add_executable(Act_01 Actividad1.c)
 
 add_executable(Act_02 Actividad2.c)
 
+add_executable(Act_03 Actividad3.c)
+
 target_link_libraries(Act_02 Colors)
+target_link_libraries(Act_03 Colors)
