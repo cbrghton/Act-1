@@ -15,7 +15,6 @@
 #include "colors.h"
 
 char *resultado(int flag) {
-    green();
     if (flag) {
         return "1-Verdadero";
     } else {
@@ -178,20 +177,26 @@ int ejercicio4() {
 
     r = 100;
 
+    yellow();
     option = r *= 100;
     printf("2) r *= 100");
     if (second == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n");
 
     r = 100;
 
+    yellow();
     option = r += 100;
     printf("3) r += 100");
     if (second == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n\n");
@@ -201,33 +206,42 @@ int ejercicio4() {
 
     ////////////////////////////////////////////////////
 
+    reset();
     printf("c) y = y / (10 + x) es equivalente a:\n");
 
     int third = y / (10 + x);
 
+    yellow();
     option = y /= 10*x;
     printf("1) y /= 10 * x");
     if (third == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n");
 
     y = 6;
 
+    yellow();
     option = y /= 10 + y / x;
     printf("2) y /= 10 + y / x");
     if (third == option) {
+        green();
         printf("  <- Este es correcto");
+        reset();
     }
 
     printf("\n");
 
     y = 6;
 
+    yellow();
     option = y /= 10 + x;
     printf("3) y /= 10 + x");
     if (third == option) {
+        green();
         printf("  <- Este es correcto");
     }
 
@@ -238,14 +252,17 @@ int ejercicio4() {
 
     //////////////////////////////////////////////
 
+    reset();
     printf("d) z = 3 * x + 6 es equivalente a:\n");
 
     int fourth = 3 * x + 6;
     int fourth_flag = 0;
 
+    yellow();
     option = z *= x + 6;
     printf("1) z *= x + 6");
     if (fourth == option) {
+        green();
         fourth_flag = 1;
         printf("  <- Este es correcto");
     }
@@ -254,9 +271,11 @@ int ejercicio4() {
 
     z = 9;
 
+    yellow();
     option = z *= 3 + 6;
     printf("2) z *= 3 + 6");
     if (fourth == option) {
+        green();
         fourth_flag = 1;
         printf("  <- Este es correcto");
     }
@@ -265,13 +284,16 @@ int ejercicio4() {
 
     z = 9;
 
+    yellow();
     printf("3) No es posible");
 
     if (!fourth_flag) {
+        green();
         printf("  <- Este es correcto");
     }
 
     printf("\n\n");
+    reset();
 
     return 0;
 }
@@ -281,6 +303,7 @@ int ejercicio5() {
     int y = 20;
     int z = 30;
 
+    green();
     printf("x = 10\ny = 20\nz = 30\n");
 
     printf("a) z = x - y  &  t = z - y\n");
@@ -299,6 +322,8 @@ int ejercicio5() {
 
     printf("e) (x + y != z) && (1/(z-x-y) != 1)\n%d\n\n", ((x+y != z) && ((1/(z-x-y)) != 1)));
 
+    reset();
+
     return 0;
 }
 
@@ -307,22 +332,31 @@ int ejercicio6() {
     int op2 = 20;
     int op3 = 30;
 
+    yellow();
     printf("a) op1 > op2\n%s\n\n", resultado(op1 > op2));
 
+    yellow();
     printf("b) (op3 - op1) <= op2\n%s\n\n", resultado((op3-op1) <= op2));
 
+    yellow();
     printf("c) (op1 + op2) == op3\n%s\n\n", resultado((op1+op2) == op3));
 
+    yellow();
     printf("d) op1 + op2 != op3\n%s\n\n", resultado((op1+op2) != op3));
 
+    yellow();
     printf("e) !((op1 + op2) <= op3)\n%s\n\n", resultado(!((op1+op2) <= op3)));
 
+    yellow();
     printf("f) (op2 * 22) > (op3 * 19)\n%s\n\n", resultado((op2*22) > (op3*19)));
 
+    yellow();
     char* g1 = resultado(op3 <= op2);
     char* g2 = resultado((op3 - op2 == op1) && (op1 <= op3));
     char* g3 = resultado((op2 - op1 != op1) || !(op3 < (op2 + op2)));
     printf("g) op3 <= op2\n%s\n\n(op3 - op2 == op1) && (op1 <= op3)\n%s\n\n(op2 - op1 != op1) || !(op3 < (op2 + op2))\n%s\n\n", g1, g2, g3);
+
+    reset();
 
     return 0;
 }
