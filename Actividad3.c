@@ -45,9 +45,12 @@ int main()
         } else if (age >= 7 && age <= 12) {
             green();
             printf("Le recomendamos: High School Musical\n");
-        } else if (age >= 17 && age <= 28) {
+        } else if (age >= 13 && age <= 16) {
             green();
             printf("Le recomendamos: Capitan America Civil War\n");
+        } else if (age >= 17 && age <= 28) {
+            green();
+            printf("Le recomendamos: Divergente\n");
         } else if (age >= 29 && age <= 45) {
             green();
             printf("Le recomendamos: Star Wars IV\n");
